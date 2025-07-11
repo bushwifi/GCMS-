@@ -467,6 +467,9 @@
     z-index: 998;
     overflow-y: auto;
 }
+body.mobile-nav-open .main-container {
+    filter: blur(5px);
+}
 
 .mobile-nav.active {
     right: 0;
@@ -588,4 +591,42 @@
 
 .mobile-menu.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Add this to your existing CSS - Black overlay with low opacity when mobile menu is open */
+body.mobile-nav-open main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+body.mobile-nav-open main {
+    position: relative;
+}
+
+body.mobile-nav-open footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+body.mobile-nav-open footer {
+    position: relative;
+}
+
+/* Ensure flag dropdown stays above mobile menu overlay */
+.language-selector .dropdown-content {
+    z-index: 1002 !important;
 }
