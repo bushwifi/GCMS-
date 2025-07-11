@@ -1,0 +1,4 @@
+##Use these commands every time you change files:
+git add .
+git commit -m "Updated"
+git push
