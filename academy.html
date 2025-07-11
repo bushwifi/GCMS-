@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halal Courses - GCMS</title>
+    <link rel="stylesheet" href="./css/acedmy.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+            </a>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#about">ABOUT US</a>
+                        <div class="dropdown-content">
+                            <a href="aboutus.html">About Us</a>
+                            <a href="policy.html">Our Policy</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#certification">CERTIFICATION</a>
+                        <div class="dropdown-content">
+                            <a href="certificationprocess.html">Certification Process</a>
+                            <a href="certifiedcompany.html">Certified Companies</a>
+                            <a href="treminatedcer.html">Terminated Certificate</a>
+                        </div>
+                    </li>
+                    <li><a href="traceability.html">TRACEABILITY</a></li>
+                    <li class="dropdown">
+                        <a href="#academy">ACADEMY</a>
+                        <div class="dropdown-content">
+                            <a href="academy.html">ISO Course</a>
+                            <a href="academy.html">Halal Course</a>
+                            <a href="academy.html">Other Courses</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#inquiry">INQUIRY</a>
+                        <div class="dropdown-content">
+                            <a href="#fssc">FSSC</a>
+                            <a href="#iso">ISO</a>
+                            <a href="#global-gap">Global GAP</a>
+                            <a href="#eu-organic">EU Organic</a>
+                            <a href="#notified-bodies">Notified Bodies</a>
+                        </div>
+                    </li>
+                    <li><a href="#accreditation">ACCREDITATION</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector dropdown">
+                <div class="flag"></div>
+                <div class="dropdown-content">
+                    <a href="#en">ENGLISH</a>
+                    <a href="#ru">RUSSIAN</a>
+                    <a href="#cn">CHINESE</a>
+                </div>
+            </div>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">ABOUT US</div>
+            <a href="aboutus.html" class="mobile-nav-item">ABOUT US</a>
+            <a href="policy.html" class="mobile-nav-item">OUR POLICY</a>
+        </div>
+
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">CERTIFICATION</div>
+            <a href="certified-companies.html" class="mobile-nav-item">CERTIFIED COMPANIES</a>
+            <a href="terminated-certificate.html" class="mobile-nav-item">TERMINATED CERTIFICATE</a>
+        </div>
+
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">TRACEABILITY</div>
+            <a href="traceability.html" class="mobile-nav-item">TRACEABILITY</a>
+        </div>
+
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">ACADEMY</div>
+            <a href="#iso-course" class="mobile-nav-item">ISO COURSE</a>
+            <a href="halal-courses.html" class="mobile-nav-item active">HALAL COURSE</a>
+            <a href="#other-courses" class="mobile-nav-item">OTHER COURSES</a>
+        </div>
+
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">INQUIRY</div>
+            <a href="#ias-inquiry" class="mobile-nav-item">IAS INQUIRY</a>
+            <a href="#fssc-inquiry" class="mobile-nav-item">FSSC INQUIRY</a>
+            <a href="#fami-qs-inquiry" class="mobile-nav-item">FAMI-QS INQUIRY</a>
+        </div>
+
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">ACCREDITATION</div>
+        </div>
+
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">CONTACT US</div>
+        </div>
+
+        <div class="mobile-language-section">
+            <div class="mobile-language-title">
+                <div class="mobile-flag"></div>
+                LANGUAGE
+            </div>
+            <a href="#english" class="mobile-nav-item">ENGLISH</a>
+            <a href="#russian" class="mobile-nav-item">RUSSIAN</a>
+            <a href="#chinese" class="mobile-nav-item">CHINESE</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Halal Courses</h1>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <p class="intro-text">
+            Global Certification and Monitoring Services (GCMS) provides assessment and certification services in accordance with the following international standards:
+        </p>
+
+        <h2 class="section-title">Why Certification is Needed</h2>
+
+        <div class="certification-grid">
+            <!-- Row 1 -->
+            <div class="cert-card" onclick="openModal('iso9001-2015')">
+                <h3 class="cert-title">📋 ISO 9001:2015</h3>
+                <p class="cert-description">Quality Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('iso14001-2015')">
+                <h3 class="cert-title">📋 ISO 14001:2015</h3>
+                <p class="cert-description">Environmental Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('iso45001-2018')">
+                <h3 class="cert-title">📋 ISO 45001:2018</h3>
+                <p class="cert-description">Occupational Health and Safety Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('iso22000-2018')">
+                <h3 class="cert-title">📋 ISO 22000:2018</h3>
+                <p class="cert-description">Food Safety Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="cert-card" onclick="openModal('iso13485-2016')">
+                <h3 class="cert-title">📋 ISO 13485:2016</h3>
+                <p class="cert-description">Quality Management Systems for Medical Devices</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('halal')">
+                <h3 class="cert-title">📋 HALAL</h3>
+                <p class="cert-description">Certification of Products According to International Halal Standards</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('fssc22000')">
+                <h3 class="cert-title">📋 FSSC 22000</h3>
+                <p class="cert-description">Food Safety Certification</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('iso27001-2022')">
+                <h3 class="cert-title">📋 ISO/IEC 27001:2022</h3>
+                <p class="cert-description">Information Security Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="cert-card" onclick="openModal('iso9001-2015-2')">
+                <h3 class="cert-title">📋 ISO 9001:2015</h3>
+                <p class="cert-description">Quality Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('iso14001-2015-2')">
+                <h3 class="cert-title">📋 ISO 14001:2015</h3>
+                <p class="cert-description">Environmental Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('iso45001-2018-2')">
+                <h3 class="cert-title">📋 ISO 45001:2018</h3>
+                <p class="cert-description">Occupational Health and Safety Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('iso22000-2018-2')">
+                <h3 class="cert-title">📋 ISO 22000:2018</h3>
+                <p class="cert-description">Food Safety Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="cert-card" onclick="openModal('iso13485-2016-2')">
+                <h3 class="cert-title">📋 ISO 13485:2016</h3>
+                <p class="cert-description">Quality Management Systems for Medical Devices</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('halal-2')">
+                <h3 class="cert-title">📋 HALAL</h3>
+                <p class="cert-description">Certification of Products According to International Halal Standards</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('fssc22000-2')">
+                <h3 class="cert-title">📋 FSSC 22000</h3>
+                <p class="cert-description">Food Safety Certification</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('iso27001-2022-2')">
+                <h3 class="cert-title">📋 ISO/IEC 27001:2022</h3>
+                <p class="cert-description">Information Security Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="cert-card" onclick="openModal('iso9001-2015-3')">
+                <h3 class="cert-title">📋 ISO 9001:2015</h3>
+                <p class="cert-description">Quality Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('iso14001-2015-3')">
+                <h3 class="cert-title">📋 ISO 14001:2015</h3>
+                <p class="cert-description">Environmental Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('iso45001-2018-3')">
+                <h3 class="cert-title">📋 ISO 45001:2018</h3>
+                <p class="cert-description">Occupational Health and Safety Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('iso22000-2018-3')">
+                <h3 class="cert-title">📋 ISO 22000:2018</h3>
+                <p class="cert-description">Food Safety Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <!-- Row 6 -->
+            <div class="cert-card" onclick="openModal('iso13485-2016-3')">
+                <h3 class="cert-title">📋 ISO 13485:2016</h3>
+                <p class="cert-description">Quality Management Systems for Medical Devices</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('halal-3')">
+                <h3 class="cert-title">📋 HALAL</h3>
+                <p class="cert-description">Certification of Products According to International Halal Standards</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('fssc22000-3')">
+                <h3 class="cert-title">📋 FSSC 22000</h3>
+                <p class="cert-description">Food Safety Certification</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+
+            <div class="cert-card" onclick="openModal('iso27001-2022-3')">
+                <h3 class="cert-title">📋 ISO/IEC 27001:2022</h3>
+                <p class="cert-description">Information Security Management Systems</p>
+                <a href="#" class="read-more-btn" onclick="event.stopPropagation()">Read more</a>
+            </div>
+        </div>
+
+        <p class="final-text">
+            We provide high-quality certification services that meet international requirements, helping businesses enhance efficiency, customer trust, and market competitiveness.
+        </p>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="certModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="cert-icon" id="modalIcon">📋</div>
+                <h3 class="modal-title" id="modalTitle">ISO 22716:2007</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h4 id="modalSubtitle">Certification of Products According to International Halal Standards</h4>
+                </div>
+                <div class="modal-section">
+                    <h4>Who it's for:</h4>
+                    <p id="modalWhoFor">Food, cosmetics, and pharmaceutical manufacturers.</p>
+                </div>
+                <div class="modal-section">
+                    <h4>Purpose:</h4>
+                    <p id="modalPurpose">Confirms that products comply with Islamic regulations.</p>
+                </div>
+                <div class="modal-section">
+                    <h4>Benefits:</h4>
+                    <p id="modalBenefits">Access to Muslim markets, increased consumer trust, compliance with religious requirements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-icon"></div>
+                <span>GCMS</span>
+            </div>
+            <div class="footer-links">
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#cookies">Cookies Policy</a>
+            </div>
+            <div class="social-links">
+                <a href="#facebook">f</a>
+                <a href="#linkedin">in</a>
+                <a href="#instagram">ig</a>
+            </div>
+            <div class="copyright">
+                © 2025 - Global Certification and Monitoring Services
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-item, .mobile-nav-title').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileNav').classList.remove('active');
+            });
+        });
+
+        // Modal functionality
+        const certifications = {
+            'iso9001-2015': {
+                title: 'ISO 9001:2015',
+                subtitle: 'Quality Management Systems',
+                whoFor: 'Organizations of all sizes and types seeking to improve customer satisfaction.',
+                purpose: 'Ensures consistent quality in products and services through effective management systems.',
+                benefits: 'Improved efficiency, customer satisfaction, and competitive advantage.'
+            },
+            'iso14001-2015': {
+                title: 'ISO 14001:2015',
+                subtitle: 'Environmental Management Systems',
+                whoFor: 'Organizations committed to environmental responsibility and sustainability.',
+                purpose: 'Helps organizations minimize environmental impact and comply with regulations.',
+                benefits: 'Reduced environmental footprint, cost savings, enhanced reputation.'
+            },
+            'iso45001-2018': {
+                title: 'ISO 45001:2018',
+                subtitle: 'Occupational Health and Safety Management Systems',
+                whoFor: 'Organizations prioritizing workplace safety and employee wellbeing.',
+                purpose: 'Provides framework for improving employee safety and reducing workplace risks.',
+                benefits: 'Reduced accidents, improved morale, legal compliance.'
+            },
+            'iso22000-2018': {
+                title: 'ISO 22000:2018',
+                subtitle: 'Food Safety Management Systems',
+                whoFor: 'Food industry organizations throughout the supply chain.',
+                purpose: 'Ensures food safety from farm to fork through systematic approach.',
+                benefits: 'Enhanced food safety, consumer confidence, market access.'
+            },
+            'iso13485-2016': {
+                title: 'ISO 13485:2016',
+                subtitle: 'Quality Management Systems for Medical Devices',
+                whoFor: 'Medical device manufacturers and related service providers.',
+                purpose: 'Ensures quality and safety of medical devices throughout lifecycle.',
+                benefits: 'Regulatory compliance, patient safety, market access.'
+            },
+            'halal': {
+                title: 'ISO 22716:2007',
+                subtitle: 'Certification of Products According to International Halal Standards',
+                whoFor: 'Food, cosmetics, and pharmaceutical manufacturers.',
+                purpose: 'Confirms that products comply with Islamic regulations.',
+                benefits: 'Access to Muslim markets, increased consumer trust, compliance with religious requirements.'
+            },
+            'fssc22000': {
+                title: 'FSSC 22000',
+                subtitle: 'Food Safety Certification',
+                whoFor: 'Food manufacturers and processors in the supply chain.',
+                purpose: 'Combines ISO 22000 with additional requirements for comprehensive food safety.',
+                benefits: 'Global recognition, supply chain confidence, risk reduction.'
+            },
+            'iso27001-2022': {
+                title: 'ISO/IEC 27001:2022',
+                subtitle: 'Information Security Management Systems',
+                whoFor: 'Organizations handling sensitive information and digital assets.',
+                purpose: 'Protects information through systematic security management approach.',
+                benefits: 'Data protection, cyber resilience, stakeholder confidence.'
+            }
+        };
+
+        function openModal(certId) {
+            const modal = document.getElementById('certModal');
+            const cert = certifications[certId] || certifications['halal'];
+            
+            document.getElementById('modalIcon').textContent = '📋';
+            document.getElementById('modalTitle').textContent = cert.title;
+            document.getElementById('modalSubtitle').textContent = cert.subtitle;
+            document.getElementById('modalWhoFor').textContent = cert.whoFor;
+            document.getElementById('modalPurpose').textContent = cert.purpose;
+            document.getElementById('modalBenefits').textContent = cert.benefits;
+            
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('certModal');
+            modal.classList.remove('active');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('certModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

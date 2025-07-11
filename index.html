@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCMS - Global Certification and Monitoring Services</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <!-- Stars background -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+             <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+            </a>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#about">ABOUT US</a>
+                        <div class="dropdown-content">
+                            <a href="aboutus.html">About Us</a>
+                            <a href="policy.html">Our Policy</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#certification">CERTIFICATION</a>
+                        <div class="dropdown-content">
+                            <a href="certificationprocess.html">Certification Process</a>
+                            <a href="certifiedcompany.html">Certified Companies</a>
+                            <a href="treminatedcer.html">Terminated Certificate</a>
+                        </div>
+                    </li>
+                    <li><a href="Traceability.html">TRACEABILITY</a></li>
+                    <li class="dropdown">
+                        <a href="#academy">ACADEMY</a>
+                        <div class="dropdown-content">
+                            <a href="academy.html">ISO Course</a>
+                            <a href="academy.html">Halal Course</a>
+                            <a href="academy.html">Other Courses</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#inquiry">INQUIRY</a>
+                        <div class="dropdown-content">
+                            <a href="#fssc">FSSC</a>
+                            <a href="#iso">ISO</a>
+                            <a href="#global-gap">Global GAP</a>
+                            <a href="#eu-organic">EU Organic</a>
+                            <a href="#notified-bodies">Notified Bodies</a>
+                        </div>
+                    </li>
+                    <li><a href="#accreditation">ACCREDITATION</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+                     <div class="language-selector dropdown">
+                <div class="flag"></div>
+                <div class="dropdown-content">
+                    <a href="#en">ENGLISH</a>
+                    <a href="#ru">RUSSIAN</a>
+                    <a href="#cn">CHINESE</a>
+                </div>
+            </div>
+                </ul>
+                
+            </nav>
+           
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">ABOUT US</div>
+            <a href="aboutus.html" class="mobile-nav-item">ABOUT US</a>
+            <a href="policy.html" class="mobile-nav-item">OUR POLICY</a>
+        </div>
+
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">CERTIFICATION</div>
+        </div>
+
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">TRACEABILITY</div>
+        </div>
+
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">ACADEMY</div>
+            <a href="#iso-course" class="mobile-nav-item">ISO COURSE</a>
+            <a href="#halal-course" class="mobile-nav-item">HALAL COURSE</a>
+            <a href="#other-courses" class="mobile-nav-item">OTHER COURSES</a>
+        </div>
+
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">INQUIRY</div>
+            <a href="#ias-inquiry" class="mobile-nav-item">IAS INQUIRY</a>
+            <a href="#fssc-inquiry" class="mobile-nav-item">FSSC INQUIRY</a>
+            <a href="#fami-qs-inquiry" class="mobile-nav-item">FAMI-QS INQUIRY</a>
+        </div>
+
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">ACCREDITATION</div>
+        </div>
+
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">CONTACT US</div>
+        </div>
+
+        <div class="mobile-language-section">
+            <div class="mobile-language-title">
+                <div class="mobile-flag"></div>
+                LANGUAGE
+            </div>
+            <a href="#english" class="mobile-nav-item">ENGLISH</a>
+            <a href="#russian" class="mobile-nav-item">RUSSIAN</a>
+            <a href="#chinese" class="mobile-nav-item">CHINESE</a>
+        </div>
+    </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="hero-content">
+            <h1 class="hero-title">GCMS</h1>
+            <p class="hero-subtitle">Global Certification and Monitoring Services</p>
+            <p class="hero-description">An international certification body for ISO and Halal standards.</p>
+            <p class="hero-description">We help businesses of all sizes meet global standards, strengthen customer trust, and enhance market competitiveness.</p>
+            <p class="hero-tagline">With us, certification is simple, transparent, and efficient.</p>
+            <a href="#certificate" class="cta-button">CHECK CERTIFICATE</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-icon"></div>
+            </div>
+            <div class="footer-links">
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#cookies">Cookies Policy</a>
+            </div>
+            <div class="social-links">
+                <a href="#facebook">f</a>
+                <a href="#linkedin">in</a>
+                <a href="#instagram">ig</a>
+            </div>
+            <div class="copyright">
+                © 2025 - Global Certification and Monitoring Services
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Generate stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numberOfStars = 50;
+            
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Mobile menu toggle
+    function toggleMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay = document.getElementById('mobileNavOverlay');
+    const body = document.body;
+    const mobileMenuBtn = document.querySelector('.mobile-menu');
+    
+    // Toggle active classes
+    mobileNav.classList.toggle('active');
+    overlay.classList.toggle('active');
+    body.classList.toggle('mobile-nav-open');
+    mobileMenuBtn.classList.toggle('active');
+}
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.mobile-nav-item, .mobile-nav-title').forEach(link => {
+    link.addEventListener('click', () => {
+        closeMobileMenu();
+    });
+});
+// Close mobile menu when clicking on overlay
+document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.getElementById('mobileNavOverlay');
+    if (overlay) {
+        overlay.addEventListener('click', closeMobileMenu);
+    }
+});
+
+function closeMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay = document.getElementById('mobileNavOverlay');
+    const body = document.body;
+    const mobileMenuBtn = document.querySelector('.mobile-menu');
+    
+    mobileNav.classList.remove('active');
+    overlay.classList.remove('active');
+    body.classList.remove('mobile-nav-open');
+    mobileMenuBtn.classList.remove('active');
+}
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-item, .mobile-nav-title').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileNav').classList.remove('active');
+            });
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createStars();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
