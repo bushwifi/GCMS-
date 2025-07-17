@@ -73,21 +73,23 @@
             padding: 0 20px;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 24px;
-            font-weight: bold;
-        }
+       .logo {
+  display: flex;
+  align-items: center;
+  height: 80px; /* Set your fixed navbar height here */
+  overflow: hidden; /* Prevent logo from overflowing */
+}
 
-        .logo-icon {
-    width: 100px; /* keep normal dimensions */
-    height: 100px;
-    background: url('../Image/logo.png') center center/contain no-repeat;
-    transform: scale(1.5); /* makes it appear larger without affecting layout */
-    transform-origin: center center; /* ensures it scales from the center */
-        }
+.logo-icon {
+  width: 150px;
+  height: 150px;
+  background: url('../Image/logo.png') center center/contain no-repeat;
+  object-fit: contain;
+
+  transform: scale(1.0); /* Visually enlarge */
+  transform-origin: center;
+}
+
 
         nav ul {
             display: flex;
