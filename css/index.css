@@ -196,11 +196,17 @@ linear-gradient(-25deg, transparent 45%, #FFF 45% 55%, transparent 55%);
             text-align: center;
             flex: 1;
         }
+        
 
         .hero-content {
             max-width: 600px;
             animation: fadeInUp 1s ease-out;
         }
+        .hero-logo {
+  width: 250px;   /* Adjust width as needed */
+  height: auto;
+  margin-bottom: 30px;
+}
 
         .hero-title {
             font-size: clamp(4rem, 8vw, 8rem);
