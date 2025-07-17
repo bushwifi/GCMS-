@@ -8,7 +8,7 @@
             font-family: 'Arial', sans-serif;
             background: url('../Image/bg.png') center center/cover no-repeat fixed;
             /*color: white;*/
-            min-height: 100vh;
+            min-height: 100%;
             position: relative;
             overflow-x: hidden;
         }
@@ -83,10 +83,11 @@
         }
 
         .logo-icon {
-            width: 70px;
-            height: 70px;
-            background: url('../Image/logo.png') center center/contain no-repeat;
-            background-color: linear-gradient(45deg, #6c5ce7, #a29bfe);
+    width: 100px; /* keep normal dimensions */
+    height: 100px;
+    background: url('../Image/logo.png') center center/contain no-repeat;
+    transform: scale(1.5); /* makes it appear larger without affecting layout */
+    transform-origin: center center; /* ensures it scales from the center */
         }
 
         nav ul {
@@ -138,11 +139,19 @@
         }
 
         .flag {
-            width: 24px;
-            height: 16px;
-            background: linear-gradient(to bottom, #012169 33%, white 33%, white 66%, #C8102E 66%);
-            position: relative;
-            cursor: pointer;
+    width: 24px;
+    height: 16px;
+    background: linear-gradient(transparent 40%, #C8102E 40% 60%, transparent 60%),
+linear-gradient(to right, transparent 45%, #C8102E 45% 55%, transparent 55%),
+linear-gradient(transparent 35%, #FFF 35% 65%, transparent 65%),
+linear-gradient(to right, transparent 42.25%, #FFF 42.25% 57.75%, transparent 42.25%),
+linear-gradient(25deg, transparent 47.5%, #C8102E 47.5% 52.5%, transparent 52.5%),
+linear-gradient(-25deg, transparent 47.5%, #C8102E 47.5% 52.5%, transparent 52.5%),
+linear-gradient(25deg, transparent 45%, #FFF 45% 55%, transparent 55%),
+linear-gradient(-25deg, transparent 45%, #FFF 45% 55%, transparent 55%);
+    background-color: #012169;
+    position: relative;
+    cursor: pointer;
         }
 
         .flag::before {
@@ -190,19 +199,19 @@
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 600px;
             animation: fadeInUp 1s ease-out;
         }
 
         .hero-title {
             font-size: clamp(4rem, 8vw, 8rem);
-            font-weight: 900;
+            font-weight: 400;
             margin-bottom: 20px;
             background: linear-gradient( #FFFFFF);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 0 30px rgba(162, 155, 254, 0.5);
+            
         }
 
         .hero-subtitle {
@@ -214,7 +223,7 @@
 
         .hero-description {
             font-size: clamp(1rem, 2vw, 1.3rem);
-            line-height: 1.6;
+            line-height: 1.0;
             margin-bottom: 20px;
             color: #e2e8f0;
         }
@@ -388,7 +397,7 @@
 
         .dropdown-content a:hover {
             background: rgba(162, 155, 254, 0.1);
-            color: #a29bfe;
+            color: #9669FF;
             padding-left: 25px;
         }
 
@@ -562,8 +571,14 @@ body.mobile-nav-open .main-container {
     width: 100%;
     height: 100%;
     background: 
-        linear-gradient(45deg, transparent 45%, #C8102E 45%, #C8102E 55%, transparent 55%),
-        linear-gradient(-45deg, transparent 45%, #C8102E 45%, #C8102E 55%, transparent 55%);
+        linear-gradient(transparent 40%, #C8102E 40% 60%, transparent 60%),
+linear-gradient(to right, transparent 45%, #C8102E 45% 55%, transparent 55%),
+linear-gradient(transparent 35%, #FFF 35% 65%, transparent 65%),
+linear-gradient(to right, transparent 42.25%, #FFF 42.25% 57.75%, transparent 42.25%),
+linear-gradient(25deg, transparent 47.5%, #C8102E 47.5% 52.5%, transparent 52.5%),
+linear-gradient(-25deg, transparent 47.5%, #C8102E 47.5% 52.5%, transparent 52.5%),
+linear-gradient(25deg, transparent 45%, #FFF 45% 55%, transparent 55%),
+linear-gradient(-25deg, transparent 45%, #FFF 45% 55%, transparent 55%);
 }
 
 /* Responsive adjustments */
