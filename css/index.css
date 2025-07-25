@@ -548,8 +548,8 @@ footer {
     }
 
     .logo-icon {
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
     }
 }
 
@@ -592,7 +592,7 @@ body.mobile-nav-open .main-container {
 
 .mobile-nav-title {
     color: white;
-    font-size: 15px; /* Further reduced font size */
+    font-size: 12px; /* Further reduced font size */
     font-weight: 200;
     padding: 12px 15px 8px 15px; /* Much smaller padding */
     text-transform: uppercase;
