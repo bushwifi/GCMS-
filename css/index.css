@@ -482,13 +482,13 @@ footer {
     }
 
     footer {
-        padding: 40px 20px 30px;
+        padding: 15px 20px 30px;
     }
     
     .footer-content {
         flex-direction: column;
         text-align: center;
-        gap: 25px;
+        gap: 10px;
     }
     
     .footer-logo {
