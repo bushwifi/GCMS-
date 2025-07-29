@@ -384,21 +384,21 @@
         .mobile-nav {
             position: fixed;
             top: 0;
-            left: -100%;
-            width: 100%;
+            right: -320px;
+            width:  200px;
             height: 100vh;
             background: rgba(5, 15, 25, 0.98);
             backdrop-filter: blur(20px);
             display: flex;
             flex-direction: column;
             padding: 80px 30px 30px;
-            transition: left 0.3s ease;
+            transition: right 0.3s ease-in-out;
             z-index: 999;
             overflow-y: auto;
         }
 
         .mobile-nav.active {
-            left: 0;
+            right: 0;
         }
 
         .mobile-nav-section {
@@ -407,7 +407,7 @@
 
         .mobile-nav-title {
             color: white;
-            font-size: 16px;
+            font-size: 13px;
             font-weight: 600;
             margin-bottom: 15px;
             text-transform: uppercase;
@@ -417,7 +417,7 @@
         .mobile-nav-item {
             color: #cbd5e0;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 10px;
             font-weight: 400;
             display: block;
             padding: 12px 0;
@@ -512,8 +512,8 @@
             }
 
             .logo-icon {
-                width: 30px;
-                height: 30px;
+                width: 70px;
+                height: 70px;
             }
         }
 
