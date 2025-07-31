@@ -51,9 +51,7 @@
                     </li>
                     <li><a href="#accreditation">ACCREDITATION</a></li>
                     <li><a href="contactus.html">CONTACT US</a></li>
-                </ul>
-            </nav>
-            <div class="language-selector dropdown">
+                      <div class="language-selector dropdown">
                 <div class="flag"></div>
                 <div class="dropdown-content">
                     <a href="#en">ENGLISH</a>
@@ -61,6 +59,10 @@
                     <a href="#cn">CHINESE</a>
                 </div>
             </div>
+                </ul>
+                
+            </nav>
+          
             <div class="mobile-menu" onclick="toggleMobileMenu()">
                 <span></span>
                 <span></span>
@@ -69,29 +71,30 @@
         </div>
     </header>
 
-    <!-- Mobile Navigation -->
+     <!-- Mobile Navigation -->
     <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" onclick="closeMobileMenu()">&times;</button>
         <div class="mobile-nav-section">
             <div class="mobile-nav-title">ABOUT US</div>
-            <a href="aboutus.html" class="mobile-nav-item">ABOUT US</a>
+            <a href="aboutus.html" class="mobile-nav-item ">ABOUT US</a>
             <a href="policy.html" class="mobile-nav-item">OUR POLICY</a>
         </div>
 
           <div class="mobile-nav-section">
             <div class="mobile-nav-title">CERTIFICATION</div>
-            <a href="certification-process.html" class="mobile-nav-item active">CERTIFICATION PROCESS</a>
-            <a href="certifiedcompany.html" class="mobile-nav-item">CERTIFIED COMPANIES</a>
+            <a href="certificationprocess.html" class="mobile-nav-item">CERTIFICATION PROCESS</a>
+            <a href="certifiedcompany.html" class="mobile-nav-item active">CERTIFIED COMPANIES</a>
             <a href="treminatedcer.html" class="mobile-nav-item">TERMINATED CERTIFICATE</a>
         </div>
 
         <div class="mobile-nav-section">
-            <div class="mobile-nav-title">TRACEABILITY</div>
+            <div href="Traceability.html" class="mobile-nav-title">TRACEABILITY</div>
         </div>
 
         <div class="mobile-nav-section">
             <div class="mobile-nav-title">ACADEMY</div>
             <a href="academy.html" class="mobile-nav-item">ISO COURSE</a>
-            <a href="academy.html" class="mobile-nav-item">HALAL COURSE</a>
+            <a href="academy.html" class="mobile-nav-item ">HALAL COURSE</a>
             <a href="academy.html" class="mobile-nav-item">OTHER COURSES</a>
         </div>
 
@@ -107,10 +110,10 @@
         </div>
 
         <div class="mobile-nav-section">
-            <div  href="contactus.html" class="mobile-nav-title">CONTACT US</div>
+            <div href="contactus.html" class="mobile-nav-title">CONTACT US</div>
         </div>
 
-        <div class="mobile-language-section">
+        <!--<div class="mobile-language-section">-->
             <div class="mobile-language-title">
                 <div class="mobile-flag"></div>
                 LANGUAGE
@@ -218,18 +221,38 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            mobileNav.classList.toggle('active');
-        }
+    // Mobile menu toggle
+function toggleMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    
+    mobileNav.classList.toggle('active');
+    mobileMenuButton.classList.toggle('active'); // This line was added
+}
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.mobile-nav-item, .mobile-nav-title').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobileNav').classList.remove('active');
-            });
-        });
+       // Close mobile menu function
+function closeMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    
+    mobileNav.classList.remove('active');
+    mobileMenuButton.classList.remove('active');
+}
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    
+    if (!mobileNav.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+        closeMobileMenu();
+    }
+});
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.mobile-nav-item, .mobile-nav-title').forEach(link => {
+    link.addEventListener('click', () => {
+        closeMobileMenu(); // Changed from inline code to function call
+    });
+});
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

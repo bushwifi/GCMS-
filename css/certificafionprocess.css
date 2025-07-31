@@ -329,8 +329,8 @@
         }
 
         .footer-logo .logo-icon {
-            width: 25px;
-            height: 25px;
+            width: 50px;
+            height: 50px;
             background: url('../Image/logo.png') center/contain no-repeat;
         }
 
@@ -383,7 +383,7 @@
         /* Mobile Navigation */
         .mobile-nav {
             position: fixed;
-            top: 0;
+            top: 40px;
             right: -320px;
             width:  200px;
             height: 100vh;
@@ -396,6 +396,45 @@
             z-index: 999;
             overflow-y: auto;
         }
+
+        /* Close button for mobile menu */
+.mobile-nav-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.mobile-nav-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #a29bfe;
+    transform: rotate(90deg);
+}
+
+        /* Mobile menu hamburger animation when active */
+.mobile-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
 
         .mobile-nav.active {
             right: 0;

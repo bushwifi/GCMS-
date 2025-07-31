@@ -80,7 +80,7 @@
 
           <div class="mobile-nav-section">
             <div class="mobile-nav-title">CERTIFICATION</div>
-            <a href="certificationprocess.html" class="mobile-nav-item active">CERTIFICATION PROCESS</a>
+            <a href="certificationprocess.html" class="mobile-nav-item">CERTIFICATION PROCESS</a>
             <a href="certifiedcompany.html" class="mobile-nav-item">CERTIFIED COMPANIES</a>
             <a href="treminatedcer.html" class="mobile-nav-item">TERMINATED CERTIFICATE</a>
         </div>
@@ -111,7 +111,7 @@
             <div href="contactus.html" class="mobile-nav-title">CONTACT US</div>
         </div>
 
-        <div class="mobile-language-section">
+        <!--<div class="mobile-language-section">-->
             <div class="mobile-language-title">
                 <div class="mobile-flag"></div>
                 LANGUAGE
@@ -130,6 +130,8 @@
     </section>
 
     <!-- Main Content -->
+     <div class="main-wrapper" id="mainWrapper">
+
     <main class="main-content">
         <p class="intro-text">
             Global Certification and Monitoring Services (GCMS) provides assessment and certification services in accordance with the following international standards:
@@ -369,19 +371,27 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            mobileNav.classList.toggle('active');
-        }
+    </div> <!-- End of main-wrapper -->
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.mobile-nav-item, .mobile-nav-title').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobileNav').classList.remove('active');
-            });
-        });
+    <script>
+       // Mobile menu toggle
+function toggleMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    
+    mobileNav.classList.toggle('active');
+    mobileMenuButton.classList.toggle('active'); // This line was added
+}
+
+        // Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    
+    if (!mobileNav.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+        closeMobileMenu();
+    }
+});
 
         // Modal functionality
         const certifications = {
@@ -496,6 +506,33 @@
                 }
             });
         });
+
+          
+    // Close mobile menu when clicking on a link
+document.querySelectorAll('.mobile-nav-item, .mobile-nav-title').forEach(link => {
+    link.addEventListener('click', () => {
+        closeMobileMenu(); // Changed from inline code to function call
+    });
+});
+    // Prevent body scroll when mobile nav is open
+    const mobileNavObserver = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                const mobileNav = mutation.target;
+                if (mobileNav.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    });
+
+    // Start observing mobile nav for class changes
+    mobileNavObserver.observe(document.getElementById('mobileNav'), {
+        attributes: true,
+        attributeFilter: ['class']
+    });
     </script>
 </body>
 </html>

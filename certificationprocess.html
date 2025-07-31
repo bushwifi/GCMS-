@@ -74,6 +74,8 @@
 
     <!-- Mobile Navigation -->
     <div class="mobile-nav" id="mobileNav">
+        <!-- Close Button -->
+<button class="mobile-nav-close" onclick="closeMobileMenu()">&times;</button>
         <div class="mobile-nav-section">
             <div class="mobile-nav-title">ABOUT US</div>
             <a href="aboutus.html" class="mobile-nav-item">ABOUT US</a>
@@ -189,7 +191,7 @@
 
             <div class="documents-grid">
                 <a href="./Documents/management-system-certification.pdf" class="document-card featured" target="_blank">
-                    <div class="document-icon">📄</div>
+                    
                     <div class="document-content">
                         <h3 class="document-title">Management system certification</h3>
                     </div>
@@ -197,7 +199,7 @@
                 </a>
 
                 <a href="./Documents/halal-certification-application-form-CRAF-1.4.pdf" class="document-card" target="_blank">
-                    <div class="document-icon">📄</div>
+                    
                     <div class="document-content">
                         <h3 class="document-title">Halal certification Application form CRAF-1.4</h3>
                     </div>
@@ -205,7 +207,7 @@
                 </a>
 
                 <a href="./Documents/product-certification.pdf" class="document-card" target="_blank">
-                    <div class="document-icon">📄</div>
+                   
                     <div class="document-content">
                         <h3 class="document-title">Product certification</h3>
                     </div>
@@ -219,7 +221,6 @@
         <div class="footer-content">
             <a href="index.html" class="footer-logo">
                 <div class="logo-icon"></div>
-                <span>GCMS</span>
             </a>
             <div class="footer-links">
                 <a href="#terms">Terms & Conditions</a>
@@ -238,17 +239,38 @@
     </footer>
 
     <script>
-        function toggleMobileMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            mobileNav.classList.toggle('active');
-        }
+        // Mobile menu toggle
+function toggleMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    
+    mobileNav.classList.toggle('active');
+    mobileMenuButton.classList.toggle('active'); // This line was added
+}
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.mobile-nav-item, .mobile-nav-title').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobileNav').classList.remove('active');
-            });
-        });
+       // Close mobile menu function
+function closeMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    
+    mobileNav.classList.remove('active');
+    mobileMenuButton.classList.remove('active');
+}
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    
+    if (!mobileNav.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+        closeMobileMenu();
+    }
+});
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.mobile-nav-item, .mobile-nav-title').forEach(link => {
+    link.addEventListener('click', () => {
+        closeMobileMenu(); // Changed from inline code to function call
+    });
+});
 
         // Add click tracking for document downloads
         document.querySelectorAll('.document-card, .scheme-link').forEach(item => {

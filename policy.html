@@ -72,6 +72,8 @@
 
     <!-- Mobile Navigation -->
     <div class="mobile-nav" id="mobileNav">
+        
+<button class="mobile-nav-close" onclick="closeMobileMenu()">&times;</button>
         <div class="mobile-nav-section">
             <div class="mobile-nav-title">ABOUT US</div>
             <a href="aboutus.html" class="mobile-nav-item">ABOUT US</a>
@@ -256,12 +258,12 @@
         </div>
     </main>
 
+  <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <a href="index.html" class="footer-logo">
+            <div class="footer-logo">
                 <div class="logo-icon"></div>
-
-            </a>
+            </div>
             <div class="footer-links">
                 <a href="#terms">Terms & Conditions</a>
                 <a href="#privacy">Privacy Policy</a>
@@ -284,12 +286,37 @@
             mobileNav.classList.toggle('active');
         }
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.mobile-nav-item, .mobile-nav-title').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobileNav').classList.remove('active');
-            });
-        });
+       // Close mobile menu function
+function closeMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    
+    mobileNav.classList.remove('active');
+    mobileMenuButton.classList.remove('active');
+}
+// Mobile menu toggle
+function toggleMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    
+    mobileNav.classList.toggle('active');
+    mobileMenuButton.classList.toggle('active'); // This line was added
+}
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    
+    if (!mobileNav.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+        closeMobileMenu();
+    }
+});
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.mobile-nav-item, .mobile-nav-title').forEach(link => {
+    link.addEventListener('click', () => {
+        closeMobileMenu(); // Changed from inline code to function call
+    });
+});
 
         // Add click tracking for document downloads
         document.querySelectorAll('.document-item').forEach(item => {
